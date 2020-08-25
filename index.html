@@ -22,30 +22,33 @@
     <div class="grid-2">
         <div class="col left-side text-center">
             <button class="btn-set" id="img-upload">
-                <i class="gg-software-upload"></i>
-                <p class="btn-txt">UPLOAD IMAGE</p>
+                <label for="file" style="cursor: pointer;">
+                    <i class="gg-software-upload"></i>
+                    <p class="btn-txt">UPLOAD IMAGE</p>
+                </label>
+                <input type="file"  accept="image/*" name="image" id="file"  onchange="loadImg(event)" style="display: none;">
             </button>
             <button class="btn-set" id="img-remove">
                 <i class="gg-remove"></i>
                 <p class="btn-txt">REMOVE IMAGE</p>
             </button>
-            <button class="btn-set" id="img-upload">
+            <button class="btn-set" id="logo-display">
                 <i class="gg-add-r"></i>
                 <p class="btn-txt">ADD LOGO</p>
             </button>
-            <button class="btn-set" id="img-upload">
-                <i class="gg-attachment"></i>
-                <p class="btn-txt">IMPORT CUSTOM LOGO</p>
+            <button class="btn-set" id="hide-logo">
+                <i class="gg-remove-r"></i>
+                <p class="btn-txt">REMOVE LOGO</p>
             </button>
-            <button class="btn-set" id="img-upload">
+            <button class="btn-set" id="logo-switch-side">
                 <i class="gg-border-right"></i>
                 <p class="btn-txt">SWITCH LOGO SIDE</p>
             </button>
-            <button class="btn-set" id="img-upload">
+            <button class="btn-set" id="logo-invert-color">
                 <i class="gg-color-picker"></i>
                 <p class="btn-txt">INVERT LOGO COLOR</p>
             </button>
-            <button class="btn-set" id="img-upload">
+            <button class="btn-set" id="export-img">
                 <i class="gg-software-download"></i>
                 <p class="btn-txt">EXPORT IMAGE</p>
             </button>
@@ -53,21 +56,19 @@
         <div class="col right-side">
             <div class="cover">
                 <div class="data-display">
-                    <p id="display-original">Original image size: <span>3000x2000</span></p>
-                    <p id="display-display">Download image size: <span>1600x800</span></p>
-                    <img src="/assets/Logo_black_text.svg" id="logo-top-right" alt="logo">
+                    <p id="display-original">Original image size: <span id="full-disp"></span></p>
+                    <p id="display-display">Download image size: <span id="disp-disp"></span></p>
+                    <img src="assets/Logo_black_text.svg" id="logo-top-right" alt="logo">
                 </div>
                 <div class="dispaly-container">
-
+                    <div class="canvas" id="canvas">
+                        <img id="output">
+                        <img src="assets/Logo_black_text.svg" style="filter: invert(0); left:10px" id="logo-over">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
 
     <!-- JavaScript -->
     <script src="app.js"></script>
