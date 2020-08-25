@@ -26,7 +26,7 @@
                     <i class="gg-software-upload"></i>
                     <p class="btn-txt">UPLOAD IMAGE</p>
                 </label>
-                <input type="file"  accept="image/*" name="image" id="file"  onchange="loadImg(event)" style="display: none;">
+                <input accept="image/*" type="file" id="file" name="imageLoader" style="display: none;" >
             </button>
             <button class="btn-set" id="img-remove">
                 <i class="gg-remove"></i>
@@ -61,10 +61,9 @@
                     <img src="assets/Logo_black_text.svg" id="logo-top-right" alt="logo">
                 </div>
                 <div class="dispaly-container">
-                    <div class="canvas" id="canvas">
-                        <img id="output">
-                        <img src="assets/Logo_black_text.svg" style="filter: invert(0); left:10px" id="logo-over">
-                    </div>
+
+                    <canvas id="img_canvas"></canvas>
+
                 </div>
             </div>
         </div>
