@@ -80,7 +80,7 @@ body {
 /* structure */
 .grid-2{
     display: grid;
-    grid-template-columns: 250px auto;
+    grid-template-columns: 200px auto;
 }
 .grid-2 .col{
     height: 100vh;
@@ -170,6 +170,16 @@ span{
   position:absolute;
   top: 0;
   right: 0;
+  z-index: 1000000;
+}
+#logo-top-right-white{
+  padding: 5px;
+  width: 170px;
+  position:absolute;
+  top: 0;
+  right: 0;
+  z-index: 100000;
+
 }
 /* canvas + image */
 
